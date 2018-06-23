@@ -1,6 +1,4 @@
-import cv2
 import numpy as np
-import matplotlib.pyplot as plt
 
 
 class DSU:
@@ -104,18 +102,3 @@ class DSU:
                                       index_par % 255,
                                       (index_par // 255) % 255])
         return img
-
-
-data_path = 'data/'
-filename = '2.jpg'
-
-image = cv2.imread(data_path + filename)
-# print(image.min(), image.max())
-dsu = DSU(image=image)
-dct = dsu.task9(k=80)
-# print(dct)
-img = dsu.draw()
-plt.imshow(img)
-plt.show()
-plt.imshow(image)
-plt.show()
